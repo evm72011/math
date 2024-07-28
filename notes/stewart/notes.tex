@@ -1,19 +1,67 @@
-\documentclass{article} % This is the class of the document. 'article' is commonly used for simple documents.
-\usepackage[utf8]{inputenc} % Allows for the use of UTF-8 encoded characters
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, left=2cm, right=2cm, top=3cm, bottom=3cm]{geometry} % Adjust margins here
+\usepackage{amsmath} % This package provides \text{ }
 
-\title{My First LaTeX Document} % Title of the document
-\author{Your Name} % Author of the document
-\date{\today} % Date of creation, \today automatically inserts the current date
+\title{Calculus}
+\author{James Stewart} 
+\date{\today}
 
 \begin{document}
-
 \maketitle % Generates the title, author, and date at the beginning of the document
 
-\section{Introduction}
-This is my first LaTeX document. LaTeX is a powerful typesetting system that is widely used for producing scientific and mathematical documents due to its ability to beautifully render complex formulas and symbols.
+\section*{1.4 Exponential Functions}
+\subsection*{The number \( e \)}
+Base for exponential function with tangent line 1 at 0.
 
-\section{Main Content}
+\section*{2.2 The Limit of a function}
+\subsection*{Definition}
+
+Let \(f\) be a function defined on some open interval that contains the number \(a\), except possibly at \(a\) itself. Then we say that
+the \textbf{limit of \( f(x) \) as \(x\) approaches \(a\) is \(L\)}, and we write
+\[
+\lim_{x \to a} f(x) = L
+\]
+This means:
+
+\[
+\forall \epsilon > 0, \, \exists \delta > 0 \, \text{ such that } \, 0 < |x - a| < \delta \implies |f(x) - L| < \epsilon.
+\]
+\subsection*{Limit Laws}
+\begin{flalign}
+\lim_{x \to a} [f(x) + g(x)] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \\
+\lim_{x \to a} [f(x) - g(x)] &= \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \\
+\lim_{x \to a} [cf(x)] &= c \lim_{x \to a} [f(x)] \\
+\lim_{x \to a} [f(x) \cdot g(x)] &= \left(\lim_{x \to a} f(x)\right) \cdot \left(\lim_{x \to a} g(x)\right) \\
+\lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)}, \quad \text{provided } \lim_{x \to a} g(x) \neq 0\\
+\lim_{x \to a} [f(x)]^n &= [\lim_{x \to a} f(x)]^n \\
+\lim_{x \to a} c &= c \\
+\lim_{x \to a} x^n &= a^n \\
+\lim_{x \to a} \sqrt[n]{x} &= \sqrt[n]{a} \\
+\lim_{x \to a} \sqrt[n]{f(x)} &= \sqrt[n]{\lim_{x \to a} f(x)} \\
+\end{flalign}
+
+\subsection*{Theorem}
+\begin{align*}
+\lim_{x \to a} f(x) &= L \Leftrightarrow \lim_{x \to a^-} f(x) = L = \lim_{x \to a^+} f(x) \\
+\end{align*}
 Here you can write the main content of your document. You can add sections, subsections, lists, figures, tables, and more. Here are some examples:
+
+\subsection*{Theorem}
+If \( f(x) \leq g(x) \) when \( x \) is near \( a \) (except possibly at \( a \)) and the limits of \( f \) and \( g \) exist as x approaches \( a \), then
+\[
+\lim_{x \to a} f(x) \leq \lim_{x \to a} g(x)
+\]
+
+\subsection*{The Squeeze Theorem}
+If \( f(x) \leq g(x) \leq h(x)\) when \( x \) is near \( a \) (except possibly at \( a \)) and
+\[
+\lim_{x \to a} f(x) = \lim_{x \to a} h(x) = L
+\]
+then
+\[
+\lim_{x \to a} g(x) = L
+\]
 
 \subsection{Lists}
 \begin{itemize}
