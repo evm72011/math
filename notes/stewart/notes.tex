@@ -15,8 +15,8 @@
 Base for exponential function with tangent line 1 at 0.
 
 \section*{2.2 The Limit of a function}
-\subsection*{Definition}
-
+\subsection*{Definitions}
+\subsubsection*{Limit} 
 Let \(f\) be a function defined on some open interval that contains the number \(a\), except possibly at \(a\) itself. Then we say that
 the \textbf{limit of \( f(x) \) as \(x\) approaches \(a\) is \(L\)}, and we write
 \[
@@ -27,6 +27,34 @@ This means:
 \[
 \forall \epsilon > 0, \, \exists \delta > 0 \, \text{ such that } \, 0 < |x - a| < \delta \implies |f(x) - L| < \epsilon.
 \]
+
+\subsubsection*{Left-Hand Limit} 
+\[
+\lim_{x \to a^-} f(x) = L
+\]
+\[
+\forall \epsilon > 0, \, \exists \delta > 0 \, \text{ such that, if} \, a - \delta < x < a \text{ then } |f(x) - L| < \epsilon.
+\]
+
+\subsubsection*{Right-Hand Limit} 
+\[
+\lim_{x \to a^+} f(x) = L
+\]
+\[
+\forall \epsilon > 0, \, \exists \delta > 0 \, \text{ such that, if} \, a < x < a + \delta \text{ then } |f(x) - L| < \epsilon.
+\]
+
+\subsubsection*{Infinite Limit} 
+Let \(f\) be a function defined on some open interval that contains the number \(a\), except possibly at \(a\) itself. Then 
+\[
+\lim_{x \to a} f(x) = \infty
+\]
+This means:
+
+\[
+\forall M > 0, \, \exists \delta > 0 \, \text{ such that } \, 0 < |x - a| < \delta \implies f(x) > M.
+\]
+
 \subsection*{Limit Laws}
 \begin{flalign}
 \lim_{x \to a} [f(x) + g(x)] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \\
