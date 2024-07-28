@@ -1,2 +1,7 @@
 code/venv
 code/__pycache__
+
+notes.dvi
+notes.log
+notes.pdf
+*.gz
