@@ -91,21 +91,34 @@ then
 \lim_{x \to a} g(x) = L
 \]
 
-\subsection{Lists}
-\begin{itemize}
-    \item First item
-    \item Second item
-    \item Third item
-\end{itemize}
+\subsection*{Continuity}
+A function \(f\) is continuous at a number \(a\) if
+\[
+\lim_{x \to a} f(x) = f(a)
+\]
 
-\subsection{Equations}
-Here is an example of a simple mathematical equation:
+A function \(f\) is continuous from the right at a number \(a\) if
+\[
+\lim_{x \to a^+} f(x) = f(a)
+\]
+and \(f\) is continuous from the left at \(a\) if
+\[
+\lim_{x \to a^-} f(x) = f(a)
+\]
 
-\begin{equation}
-    E = mc^2
-\end{equation}
+\subsubsection*{Theorem} 
+If \(f\) and \(g\) are continuous at \(a\) and \(a\) is constant, then the following functions are also continuous at \(a\)
 
-\section{Conclusion}
-This is a basic LaTeX document example. You can expand it by adding more sections, formatting text, inserting images, and using various packages to suit your document's needs.
+\[
+f + g \hspace{2cm} f-g \hspace{2cm} cf \hspace{2cm} fg \hspace{2cm} \frac{f}{g}  \hspace{.5cm} \text{if} \;  g(a) \neq 0
+\]
+
+\subsubsection*{Theorem} 
+If \(f\) is continuous at \(b\) and \( \lim\limits_{x \to a} g(x) = b\), then  \( \lim\limits_{x \to a} f(g(x)) = f(b)\).
+In other words
+
+\[
+\lim_{x \to a} f(g(x)) = f(\lim\limits_{x \to a} g(x))
+\]
 
 \end{document}
