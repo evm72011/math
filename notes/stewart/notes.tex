@@ -13,9 +13,8 @@
 \section*{1.4 Exponential Functions}
 \subsection*{The number \( e \)}
 Base for exponential function with tangent line 1 at 0.
-
-\section*{2.2 The Limit of a function}
-\subsection*{Definitions}
+\section*{2 Limits and Derivatives}
+\subsection*{2.2 The Limit of a function}
 \subsubsection*{Limit} 
 Let \(f\) be a function defined on some open interval that contains the number \(a\), except possibly at \(a\) itself. Then we say that
 the \textbf{limit of \( f(x) \) as \(x\) approaches \(a\) is \(L\)}, and we write
@@ -55,7 +54,7 @@ This means:
 \forall M > 0, \, \exists \delta > 0 \, \text{ such that } \, 0 < |x - a| < \delta \implies f(x) > M.
 \]
 
-\subsection*{Limit Laws}
+\subsubsection*{Limit Laws}
 \begin{flalign}
 \lim_{x \to a} [f(x) + g(x)] &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \\
 \lim_{x \to a} [f(x) - g(x)] &= \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \\
@@ -69,19 +68,19 @@ This means:
 \lim_{x \to a} \sqrt[n]{f(x)} &= \sqrt[n]{\lim_{x \to a} f(x)} \\
 \end{flalign}
 
-\subsection*{Theorem}
+\subsubsection*{Theorem}
 \begin{align*}
 \lim_{x \to a} f(x) &= L \Leftrightarrow \lim_{x \to a^-} f(x) = L = \lim_{x \to a^+} f(x) \\
 \end{align*}
 Here you can write the main content of your document. You can add sections, subsections, lists, figures, tables, and more. Here are some examples:
 
-\subsection*{Theorem}
+\subsubsection*{Theorem}
 If \( f(x) \leq g(x) \) when \( x \) is near \( a \) (except possibly at \( a \)) and the limits of \( f \) and \( g \) exist as x approaches \( a \), then
 \[
 \lim_{x \to a} f(x) \leq \lim_{x \to a} g(x)
 \]
 
-\subsection*{The Squeeze Theorem}
+\subsubsection*{The Squeeze Theorem}
 If \( f(x) \leq g(x) \leq h(x)\) when \( x \) is near \( a \) (except possibly at \( a \)) and
 \[
 \lim_{x \to a} f(x) = \lim_{x \to a} h(x) = L
@@ -121,4 +120,19 @@ In other words
 \lim_{x \to a} f(g(x)) = f(\lim\limits_{x \to a} g(x))
 \]
 
+\subsubsection*{Theorem} 
+If \(g\) is continuous at \(a\) \(f\) is continuous at \(g(a)\), then the composite function \(f\circ g\) given by \((f\circ g)(x) = f(g(x))\) is continuous at \(a\).
+
+\subsubsection*{The Intermediate Value Theorem} 
+Suppose that \(f\) is continuous on the closed interval \( \left[a,b\right] \) and let \(N\) be any number between \(f(a)\) and \(f(b)\), where \(f(a) \neq f(b)\). Then there exist a number \(c\) in \((a,b)\) such that \(f(c)=N\)
+
+\subsubsection*{Limit at infinity}
+Let \(f\) is function defined on some interval  \( (a, \infty ) \). Then 
+\[
+\lim_{x \to \infty} f(x) = L
+\]
+means that for \( \forall \epsilon > 0 , \exists \text{ number } N \), such that 
+for \( \forall x > N \) , \( |f(x) - L| < \epsilon \)
+
+\subsection*{2.7 Derivatives and Rates of Change}
 \end{document}
