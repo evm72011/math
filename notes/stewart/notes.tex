@@ -70,7 +70,7 @@ This means:
 
 \subsubsection*{Theorem}
 \begin{align*}
-\lim_{x \to a} f(x) &= L \Leftrightarrow \lim_{x \to a^-} f(x) = L = \lim_{x \to a^+} f(x) \\
+\lim_{x \to a} f(x) &= L \Leftrightarrow \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L \\
 \end{align*}
 Here you can write the main content of your document. You can add sections, subsections, lists, figures, tables, and more. Here are some examples:
 
@@ -140,4 +140,198 @@ The tangent line to the curve \(y=f(x)\) at the point \(P(a,f(a))\) is the line 
 m = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}
 \]
 provided that this limit exists.
+
+\subsubsection*{Definition}
+The \textbf{derivative of a function \(\boldsymbol{f}\) at a number \(\boldsymbol{a}\)}, denoted by \(f'(a)\)
+\[
+f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
+\]
+if this limit exists.
+
+\subsubsection*{The tangent line equation}
+The tangent line to \(y=f(x)\) at \( (a,f(a)) \) is the line through \( (a,f(a)) \) whose slope is equalt to \(f'(a)\)
+\[
+y - f(a) = f'(a)(x-a)
+\]
+
+\subsubsection*{Definition}
+A function \(f\) is \textbf{differentiable at \(\boldsymbol{a}\)} if \(f'(a)\) exists.
+
+\subsubsection*{Theorem}
+If \(f\) is differentiable at \(a\), then \(f\) is continuous at \(a\)
+
+\subsubsection*{Derivatives of Trigonometric Functions}
+\begin{equation*}
+\begin{aligned}[c]
+\frac{d}{dx} (\sin x) = \cos x	\\
+\frac{d}{dx} (\cos x) = -\sin x	\\
+\frac{d}{dx} (\tan x) = \sec^2 x
+\end{aligned}
+\qquad\qquad\qquad
+\begin{aligned}[c]
+\frac{d}{dx} (\csc x) = \csc x \cot	x \\
+\frac{d}{dx} (\sec x) = \sec x \tan	x \\
+\frac{d}{dx} (\cot x) = -\csc^2 x
+\end{aligned}
+\end{equation*}
+
+\subsubsection*{Two Special Trigonometric Limits}
+\begin{equation*}
+\begin{aligned}[c]
+\lim_{\theta \to 0} \frac{\sin \theta}{\theta} = 1
+\end{aligned}
+\qquad\qquad\qquad
+\begin{aligned}[c]
+\lim_{\theta \to 0} \frac{\cos \theta - 1}{\theta} = 0
+\end{aligned}
+\end{equation*}
+
+\subsubsection*{Twe Chain Rule}
+If \(g\) is differentiable at \(x\) and \(f\) is differentiable at \(g(x)\), then the composite function \(F=f \cdot g\) defined by \(F = f(g(x)) \) is differentiable at \(x\) and \(F'\) is given by the product
+\[
+F'(x) = f'(g(x)) \cdot g'(x)
+\]
+In Leibniz notation, if \(y = f(u)\) and \(u = g(x)\)
+\[
+\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx}
+\]
+
+\subsubsection*{Implicit Differentiation}
+If \(x^2 + y^2 = 25\), find \( \frac{dy}{dx} \)
+\[
+\frac{d}{dx}(x^2 + y^2)=\frac{d}{dx}(25)
+\]
+\[
+2x + 2y y' = 0 \\
+\]
+\[
+y' = -\frac{x}{y}
+\]
+\subsubsection*{Derivatives of Logarithmic Functions}
+\[
+\frac{d}{dx}(\log_b x)=\frac{1}{x \ln b}
+\]
+The proof via implicit differentiation
+
+\subsubsection*{The Number \(e\) as a Limit}
+Let \(f(x)=\ln x\), \(f'(x)=\frac{1}{x} \) and \(f'(1)=1\)
+\[
+f'(1) = \lim_{h \to 0} \frac{f(1+h)-f(1)}{h} = \lim_{x \to 0} \frac{f(1+x)-f(1)}{x}
+\]
+\[
+= \lim_{x \to 0} \frac{\ln (1+x) -\ln 1}{x} = \lim_{x \to 0} \frac{1}{x} \ln (1+x) = \lim_{x \to 0} \ln (1+x)^\frac{1}{x}=1
+\]
+\[
+e = e^1 = e^{\lim_{x \to 0} \ln (1+x)^ \frac{1}{x}} = \lim_{x \to 0} (1+x)^ \frac{1}{x}
+\]
+
+\subsubsection*{Derivatives of Inverse Trigonometric Functions}
+\begin{equation*}
+\begin{aligned}[c]
+\frac{d}{dx}(\sin^{-1} x) = \frac{1}{\sqrt{1-x^2}} 	\\
+\frac{d}{dx}(\cos^{-1} x) = -\frac{1}{\sqrt{1-x^2}}	\\
+\frac{d}{dx}(\tan^{-1} x) = \frac{1}{1+x^2}
+\end{aligned}
+\qquad\qquad\qquad
+\begin{aligned}[c]
+\frac{d}{dx}(\csc^{-1} x) = -\frac{1}{x \sqrt{x^2-1}} 	\\
+\frac{d}{dx}(\sec^{-1} x) = \frac{1}{x \sqrt{x^2-1}}		\\
+\frac{d}{dx}(\cot^{-1} x) = -\frac{1}{1+x^2}
+\end{aligned}
+\end{equation*}
+
+\subsubsection*{Linearization and Approximation}
+The linear function whose graph is this tangent line, that is, \(L(x)=f(a) + f'(a)(x-a)\) is called the linearization of \(f\) at \(a\). The approximation \(f(x) \approx L(X)\)
+
+\subsubsection*{Derivatives of Hyperbolic Functions}
+\begin{equation*}
+\begin{aligned}[c]
+\frac{d}{dx} (\sinh x) = \cosh x	\\
+\frac{d}{dx} (\cosh x) = -\sinh x	\\
+\frac{d}{dx} (\tanh x) = sech^2 x
+\end{aligned}
+\qquad\qquad\qquad
+\begin{aligned}[c]
+\frac{d}{dx} (csch x) = -csch x \coth x	\\
+\frac{d}{dx} (sech x) = -sech x \tanh x \\
+\frac{d}{dx} (\coth x) = -csch^2 x
+\end{aligned}
+\end{equation*}
+
+\subsubsection*{Derivatives of Inverse Hyperbolic Functions}
+\begin{equation*}
+\begin{aligned}[c]
+\frac{d}{dx}(\sinh^{-1} x) = \frac{1}{\sqrt{1+x^2}} 	\\
+\frac{d}{dx}(\cosh^{-1} x) = \frac{1}{\sqrt{x^2-1}}	\\
+\frac{d}{dx}(\tanh^{-1} x) = \frac{1}{1-x^2}
+\end{aligned}
+\qquad\qquad\qquad
+\begin{aligned}[c]
+\frac{d}{dx}(csch^{-1} x) = -\frac{1}{|x| \sqrt{x^2+1}} 	\\
+\frac{d}{dx}(sech^{-1} x) = -\frac{1}{x \sqrt{1-x^2}}		\\
+\frac{d}{dx}(\coth^{-1} x) = \frac{1}{1-x^2}
+\end{aligned}
+\end{equation*}
+
+\subsubsection*{The Extreme Value Theorem}
+If \(f\) is continuous on a closed interval \([a,b]\), then \(f\) attains an absolute maximum value \(f(c)\) and an absolute minimum value \(f(d)\) at some numbers \(c\) and \(d\) in \([a,b]\).
+
+\subsubsection*{Ferma's Theorem}
+If \(f\) has a local maximum or minimum at \(c\), and if \(f'(c)\) exists, then \(f'(c)=0\).
+
+\subsubsection*{Definition}
+A critical number of a function \(f\) is a number \(c\) in the domain of \(f\) such that either \(f'(c)=0\) or \(f'(c)\) does not exist.
+If \(f\) has a local maximum or minimum at \(c\), then \(c\) is a critical number of \(f\).
+
+\subsubsection*{Rolle's Theorem}
+Let \(f\) be a function that satisfies the following three hypotheses:
+\begin{enumerate}
+  \item \(f\) is continuous on the closed interval \([a,b]\).
+  \item \(f\) is differentiable on the open interval \((a,b)\).
+  \item \(f(a)=f(b)\).
+\end{enumerate}
+Then there is a number \(c\) in \((a,b)\) such that \(f'(c)=0\).
+
+\subsubsection*{The Mean Value Theorem}
+Let \(f\) be a function that satisfies the following three hypotheses:
+\begin{enumerate}
+  \item \(f\) is continuous on the closed interval \([a,b]\).
+  \item \(f\) is differentiable on the open interval \((a,b)\).
+\end{enumerate}
+Then there is a number \(c\) in \((a,b)\) such that 
+\[
+f'(c) = \frac{f(b)-f(a)}{b-a}
+\]
+
+\subsubsection*{Definition}
+If the graph of \(f\) lies above all of its tangents on an interval \(I\), then \(f\) is called \textbf{concave upward} on \(I\). If the graph of \(f\) lies below all of its tangents on \(I\), then \(f\) is called \textbf{concave downward} on \(I\).
+
+\subsubsection*{l’Hospital’s Rule}
+Suppose \(f\) and \(g\) are differentiable and \(g'(x) \neq 0 \) on an open interval \(I\) that contains \(I\) (except possibly at \(a\)). Suppose that
+\[
+\lim_{x \to a} f(x) = 0 \text{ and } \lim_{x \to a} g(x) = 0
+\]
+or that 
+\[
+\lim_{x \to a} f(x) = \pm \infty \text{ and } \lim_{x \to a} g(x) = \pm \infty
+\]
+(In other words, we have an indeterminate form of type \( \frac{0}{0} \) or \( \frac{\infty}{\infty} \)) Then
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}
+\]
+if the limit on the right side exists (or is \(\infty\) or \(-\infty\)).
+
+\subsubsection*{Indeterminate Products (Type \(0 \cdot \infty\))}
+\[
+f \cdot g = \frac{f}{1/g} = \frac{g}{1/f}
+\]
+such technique can be sometimes applied to the cases \( \infty - \infty\), \( 0^0\), \( \infty ^ 0\), \(1 ^ \infty \) (pages 314-315)
+
+\subsubsection*{Definition}
+A function \(F\) is called an antiderivative of \(f\) on an interval \(I\) if \(F'(x)=f(x)\) for all \(x\) in \(I\).
+
+\subsubsection*{Theorem}
+If \(F\) is an antiderivative of \(f\) on an interval \(I\), then the most general antiderivative of \(f\) on \(I\) is \(F(x) + C\) where \(C\) is an arbitrary constant.
+
+\subsection*{Integrals}
 \end{document}
