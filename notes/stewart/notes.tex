@@ -334,4 +334,87 @@ A function \(F\) is called an antiderivative of \(f\) on an interval \(I\) if \(
 If \(F\) is an antiderivative of \(f\) on an interval \(I\), then the most general antiderivative of \(f\) on \(I\) is \(F(x) + C\) where \(C\) is an arbitrary constant.
 
 \subsection*{Integrals}
+\subsubsection*{Definition}
+The \textbf{area} \(A\) of the region \(S\) that lies under the graph of the continuous function \(f\) is the limit of the sum of the areas of approximating rectangles
+\[
+A = \lim_{n \to \infty} R_n = \lim_{n \to \infty} [f(x_1) \Delta x + f(x_2) \Delta x + ... + f(x_n) \Delta x]
+\]
+
+\subsubsection*{Definition of a Definite Integral}
+If \(f\) is a function defined for \(a \leq x \leq b\), we divide the interval \([a,b]\) into \(n\) subintervals of equal width \(\Delta x = (b-a)/n\). We let \(x_0 (= a), x_1,x_2,...,x_n(=b)\) be the endpoints of these subintervals and we let \(x_0^*,x_1^*,x_2^*,...,x_n^*\) be any \textbf{sample points} in these subintervals, so \(x_i^*\) lies in the \textit{i}th subinterval \([x_{i-1},x_i]\). Then the \textbf{definite integral of \(f\) from \(a\) to \( b\)} is
+\[
+\int_a^b f(x) \, dx = \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*) \Delta x
+\]
+provided that this limit exists and gives the same value for all possible choices of
+sample points. If it does exist, we say that \(f\) is \textbf{integrable} on \([a,b]\).
+
+\subsubsection*{The Fundamental Theorem of Calculus, Part 1}
+If \(f\) is continuous on \([a,b]\) then the function \(g\) defined by
+\[
+g(x) = \int_a^x f(t) \, dt	\qquad a \leq x \leq b
+\]
+is continuous on \([a,b]\) and differentiable on \((a,b)\), and \(g'(x) = f(x)\)
+
+\subsubsection*{The Fundamental Theorem of Calculus, Part 2}
+If \(f\) is continuous on \([a,b]\) then
+\[
+\int_a^b f(x) \, dx	= F(b) - F(a)
+\]
+where \(F\) is any antiderivative of \(f\), that is, a function \(F\) such that \(F' = f\).
+
+\subsubsection*{Net Change Theorem}
+The integral of a rate of change is the net change:
+\[
+\int_a^b F'(x) \, dx	= F(b) - F(a)
+\]
+
+\subsubsection*{The Substitution Rule}
+If \(u=g(x)\) is a differentiable function whose range is an interval \(I\) and \(f\) is continuous on \(I\), then
+\[
+\int f(g(x))g'(x)\, dx = \int f(u)\, du
+\]
+
+\subsubsection*{The Substitution Rule for Definite Integrals}
+If \(g'\) is continuous on \([a,b]\) and \(f\) is continuous on the range of \(u=g(x)\), then
+\[
+\int_a^b f(g(x))g'(x)\, dx = \int_{g(a)}^{g(b)} f(u)\, du
+\]
+
+\subsubsection*{The Mean Value Theorem for Integrals}
+If \(f\) is continuous on \([a,b]\), then there exists a number \(c\) in \([a,b]\) such that 
+\[
+f(c) = f_{avg} = \frac{1}{b-a} \int_a^b f(x)\, dx
+\]
+or
+\[
+\int_a^b f(x)\, dx = f(c) (b - a)
+\]
+
+\subsubsection*{Integration by Parts}
+\[
+\int u\, dv = uv - \int v\, du
+\]
+
+\subsubsection*{Trigonometric Substitution}
+\begin{equation*}
+\begin{aligned}[c]
+\sqrt{a^2 - x^2} \\
+\sqrt{a^2 + x^2} \\
+\sqrt{x^2 - a^2}
+\end{aligned}
+\qquad
+\begin{aligned}[c]
+x = a \sin \theta 	\\
+x = a \tan \theta 	\\
+x = a \sec \theta 	
+\end{aligned}
+\qquad
+\begin{aligned}[c]
+1 - \sin ^2 \theta = \cos ^2 \theta \\
+1 + \tan ^2 \theta = \sec ^2 \theta \\
+\sec ^2 \theta - 1 = \tan ^2 \theta
+\end{aligned}
+\end{equation*}
+
+\subsection*{Differential Equations}
 \end{document}
